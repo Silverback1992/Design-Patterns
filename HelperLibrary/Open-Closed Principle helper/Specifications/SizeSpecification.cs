@@ -17,9 +17,6 @@ namespace SOLID.O.Specifications
             Size = size;
         }
 
-        public bool IsSatisfiedBy(Product entity)
-        {
-            throw new NotImplementedException();
-        }
+        public bool IsSatisfiedBy(Product p) => p.Size == Size;
     }
 }

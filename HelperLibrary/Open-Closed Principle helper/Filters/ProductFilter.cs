@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace SOLID.O.Filters
 {
-    public static class ProductFilter : IFilter<Product>
+    internal class ProductFilter : IFilter<Product>
     {
-        public static IEnumerable<Product> Filter(IEnumerable<Product> items, ISpecification<Product> specification) 
+        public IEnumerable<Product> Filter(IEnumerable<Product> items, ISpecification<Product> specification)
             => items.Where(x => specification.IsSatisfiedBy(x));
     }
 }
