@@ -11,6 +11,18 @@ public sealed class NaiveThreadSafeLazyLoadingSingleton
     {
         get
         {
+
+            //Console.WriteLine("Locking...");
+
+            //lock (_lock)
+            //{
+            //    if (_instance == null)
+            //    {
+            //        _instance = new NaiveThreadSafeLazyLoadingSingleton();
+            //    }
+            //}
+
+
             if (_instance == null)
             {
                 Console.WriteLine("Locking...");
