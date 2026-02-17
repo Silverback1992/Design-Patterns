@@ -1,4 +1,5 @@
-﻿namespace Singleton;
+﻿
+namespace Singleton;
 public sealed class ProperLazyLoadingThreadSafeSingleton
 {
     private static readonly Lazy<ProperLazyLoadingThreadSafeSingleton> _instance = new(() => new ProperLazyLoadingThreadSafeSingleton());
